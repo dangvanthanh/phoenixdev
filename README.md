@@ -5,7 +5,7 @@
 ## Technologies
 
 - [Elixir](https://elixir-lang.org/)
-- [Phoenix](https://www.phoenixframework.org/))
+- [Phoenix](https://www.phoenixframework.org/)
 
 ## License
 
