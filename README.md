@@ -6,7 +6,7 @@
 
 - [Elixir](https://elixir-lang.org/)
 - [Phoenix](https://www.phoenixframework.org/)
-- 
+- [Mapbox](https://www.mapbox.com/)
 
 ## License
 
