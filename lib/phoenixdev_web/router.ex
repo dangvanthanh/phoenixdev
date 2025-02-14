@@ -18,7 +18,12 @@ defmodule PhoenixdevWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/mapbox", MapLive
     live "/cookies", CookiesLive
+    live "/beatles", BeatlesLive
+    live "/beatles/:id", BeatlesLive
+    live "/albums", AlbumsLive
+    live "/albums/:id", AlbumsLive
   end
 
   # Other scopes may use custom stacks.

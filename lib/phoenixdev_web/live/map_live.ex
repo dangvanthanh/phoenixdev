@@ -15,7 +15,7 @@ defmodule PhoenixdevWeb.MapLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="h-screen w-screen">
+    <div class="h-screen w-full">
       <div class="absolute z-10 top-10 left-10">
         <button
           type="button"
@@ -25,14 +25,16 @@ defmodule PhoenixdevWeb.MapLive do
           Show me the next attraction!
         </button>
       </div>
-      <div id="map" class="h-screen w-screen" phx-hook="MapHook" data-access-token={@access_token} />
+      <div id="map" class="w-full h-screen" phx-hook="MapHook" data-access-token={@access_token} />
     </div>
     """
   end
 
   @impl true
   def mount(_params, _session, socket) do
-    access_token = Application.get_env(:phoenix_recipes, :mapbox) |> Keyword.get(:access_token)
+    #    access_token = Application.get_env(:phoenixdev, :mapbox) |> Keyword.get(:access_token)
+    access_token =
+      "pk.eyJ1IjoiZGFuZ3ZhbnRoYW5oIiwiYSI6ImNtNzBsanV6NjAzZmkyaXNhMzVxeThuYmcifQ.jjXkKg8giOL-1M3ZwKT9kw"
 
     {:ok, assign(socket, access_token: access_token)}
   end

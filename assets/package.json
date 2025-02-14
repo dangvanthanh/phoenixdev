@@ -1,5 +1,8 @@
 {
-  "dependencies": {
-    "mapbox-gl": "^3.9.4"
-  }
+	"dependencies": {
+		"mapbox-gl": "^3.9.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
 }

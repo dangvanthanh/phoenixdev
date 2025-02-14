@@ -1,5 +1,5 @@
-import MapHook from "./map-hook";
+import MapHook from "./map-hook"
 
 export default {
 	MapHook,
-};
+}
