@@ -6,14 +6,16 @@ defmodule PhoenixdevWeb.BeatlesLive do
     <div class="flex h-screen bg-slate-200">
       <div class="w-64 bg-slate-700 text-white shadow-md px-4 py-6">
         <h2 class="text-lg font-bold mb-4">
-          <a href={~p"/beatles"}>Beatles</a>
-          <a href={~p"/albums"} class="text-sm font-normal hover:underline">View Albums</a>
+          <.link patch={~p"/beatles"}>Beatles</.link>
+          <.link navigate={~p"/albums"} class="text-sm font-normal hover:underline">
+            View Albums
+          </.link>
         </h2>
         <ul class="space-y-2">
           <li :for={beatle <- @beatles} class="hover:bg-slate-600 hover:text-white rounded">
-            <a href={~p"/beatles/#{beatle}"} class="block p-2 w-full h-full">
+            <.link patch={~p"/beatles/#{beatle}"} class="block p-2 w-full h-full">
               {beatle.name}
-            </a>
+            </.link>
           </li>
         </ul>
       </div>
@@ -39,15 +41,19 @@ defmodule PhoenixdevWeb.BeatlesLive do
     """
   end
 
-  def mount(params, _session, socket) do
+  def mount(_params, _session, socket) do
     beatles = Phoenixdev.Beatles.list_beatles()
 
+    {:ok, assign(socket, beatles: beatles)}
+  end
+
+  def handle_params(params, _uri, socket) do
     beatle =
       case Map.fetch(params, "id") do
-        {:ok, id} -> Enum.find(beatles, &(to_string(&1.id) == id))
+        {:ok, id} -> Enum.find(socket.assigns.beatles, &(to_string(&1.id) == id))
         :error -> nil
       end
 
-    {:ok, assign(socket, beatle: beatle, beatles: beatles)}
+    {:noreply, assign(socket, beatle: beatle)}
   end
 end
