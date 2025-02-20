@@ -24,6 +24,7 @@ defmodule PhoenixdevWeb.Router do
     live "/beatles/:id", BeatlesLive
     live "/albums", AlbumsLive
     live "/albums/:id", AlbumsLive
+    live "/poll", PollLive
   end
 
   # Other scopes may use custom stacks.
