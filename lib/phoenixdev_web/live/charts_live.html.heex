@@ -1,0 +1,71 @@
+<div class="w-full grid grid-row gap-4">
+  <div class="w-full grid grid-row gap-4 p-4">
+    <.header>
+      Line stack
+      <:subtitle>
+        <.button
+          :if={@options[:line_stack][:cumulative]}
+          phx-click="options"
+          phx-value-name={:line_stack}
+          phx-value-cumulative="false"
+        >
+          Single
+        </.button>
+        <.button
+          :if={@options[:line_stack][:cumulative] != true}
+          phx-click="options"
+          phx-value-name={:line_stack}
+          phx-value-cumulative="true"
+        >
+          Rolling
+        </.button>
+      </:subtitle>
+    </.header>
+
+    <.async_result assign={@line_stack}>
+      <:loading>Loading...</:loading>
+      <:failed>
+        <.error>Failed to load chart</.error>
+      </:failed>
+    </.async_result>
+
+    <div id="line_stack" phx-hook="ChartHook" class="w-full h-[20rem]" phx-update="ignore" />
+  </div>
+
+  <div class="grid w-full grid-cols-1 gap-4 xl:grid-cols-2">
+    <div class="grid grid-row gap-4 p-4">
+      <.header>
+        Gauge multi title
+      </.header>
+
+      <.async_result assign={@gauge_multi_title}>
+        <:loading>Loading..</:loading>
+        <:failed>
+          <.error>Failed to load chart</.error>
+        </:failed>
+      </.async_result>
+
+      <div
+        id="guage_multi_title"
+        phx-hook="ChartHook"
+        class="w-full h-[20rem]"
+        phx-update="ignore"
+      />
+    </div>
+
+    <div class="grid grid-row gap-4 p-4">
+      <.header>
+        Processes
+      </.header>
+
+      <.async_result assign={@process_gauge}>
+        <:loading>Loading...</:loading>
+        <:failed>
+          <.error>Failed to load chart</.error>
+        </:failed>
+      </.async_result>
+
+      <div id="process_gauge" phx-hook="ChartHook" class="w-full h-[20rem]" phx-update="ignore" />
+    </div>
+  </div>
+</div>
