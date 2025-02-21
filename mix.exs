@@ -77,8 +77,9 @@ defmodule Phoenixdev.MixProject do
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
       "assets.build": ["tailwind phoenixdev", "esbuild phoenixdev"],
       "assets.deploy": [
-        "tailwind phoenixdev --minify",
-        "esbuild phoenixdev --minify",
+        # "tailwind phoenixdev --minify",
+        # "esbuild phoenixdev --minify",
+				"cmd --cd assets node build.js --deploy",
         "phx.digest"
       ]
     ]
