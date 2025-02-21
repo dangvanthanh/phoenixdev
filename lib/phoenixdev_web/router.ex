@@ -26,6 +26,7 @@ defmodule PhoenixdevWeb.Router do
     live "/albums/:id", AlbumsLive
     live "/poll", PollLive
     live "/charts", ChartsLive
+    live "/ag-grid", AgGridLive
   end
 
   # Other scopes may use custom stacks.
