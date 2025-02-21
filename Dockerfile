@@ -26,7 +26,6 @@ RUN apt-get update -y && apt-get install -y build-essential git \
 
 # prepare build dir
 WORKDIR /app
-RUN npm install
 
 # install hex + rebar
 RUN mix local.hex --force && \
