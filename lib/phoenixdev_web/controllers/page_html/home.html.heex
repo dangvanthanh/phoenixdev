@@ -1,12 +1,87 @@
 <.flash_group flash={@flash} />
-<div class="max-w-2xl mx-auto px-4 md:px-6 lg:px-8">
-  <h1>LiveView and OTP (Open Telecom Platform)</h1>
-  <p>Choose an app:</p>
-  <ul class="list-disc list-inside">
-    <li><a href="/mapbox">Mapbox</a></li>
-    <li><a href="/cookies">Cookies</a></li>
-    <li><a href="/beatles">Beatles</a></li>
-    <li><a href="/poll">Poll</a></li>
-    <li><a href="/charts">Charts</a></li>
-  </ul>
-</div>
+<header>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-5">
+      <.link navigate={~p"/"} class="font-semibold">Phoenix LiveView</.link>
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="border-t border-slate-100 divide-y divide-slate-100 space-y-10">
+    <section class="grid grid-cols-1 gap-x-8 gap-y-10 pt-10 xl:grid-cols-4">
+      <h3 class="text-base font-semibold text-slate-900">Maps</h3>
+      <ul class="col-span-3 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <li>
+          <a href="/mapbox" class="relative">
+            <div class="relative aspect-2/1 overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10 h-36">
+              <img
+                class="absolute inset-0 w-full h-full"
+                src="https://plus.unsplash.com/premium_photo-1712828731398-ad18ac5a9748?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFwc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+            </div>
+            <h4 class="mt-4 font-medium text-slate-900">Mapbox</h4>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="grid grid-cols-1 gapx-8 gap-y-10 pt-10 xl:grid-cols-4">
+      <h3 class="text-base font-semibold text-slate-900">Charts</h3>
+      <ul class="col-span-3 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <li>
+          <a href="/charts" class="relative">
+            <div class="relative aspect-2/1 overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10 h-36">
+              <img
+                class="absolute inset-0 w-full h-full"
+                src="https://plus.unsplash.com/premium_photo-1712828731398-ad18ac5a9748?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFwc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+            </div>
+            <h4 class="mt-4 font-medium text-slate-900">eCharts</h4>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="grid grid-cols-1 gapx-8 gap-y-10 pt-10 xl:grid-cols-4">
+      <h3 class="text-base font-semibold text-slate-900">Others</h3>
+      <ul class="col-span-3 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <li>
+          <a href="/cookies" class="relative">
+            <div class="relative aspect-2/1 overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10 h-36">
+              <img
+                class="absolute inset-0 w-full h-full"
+                src="https://plus.unsplash.com/premium_photo-1712828731398-ad18ac5a9748?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFwc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+            </div>
+            <h4 class="mt-4 font-medium text-slate-900">Counter</h4>
+          </a>
+        </li>
+        <li>
+          <a href="/beatles" class="relative">
+            <div class="relative aspect-2/1 overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10 h-36">
+              <img
+                class="absolute inset-0 w-full h-full"
+                src="https://plus.unsplash.com/premium_photo-1712828731398-ad18ac5a9748?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFwc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+            </div>
+            <h4 class="mt-4 font-medium text-slate-900">Beatles</h4>
+          </a>
+        </li>
+        <li>
+          <a href="/poll" class="relative">
+            <div class="relative aspect-2/1 overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10 h-36">
+              <img
+                class="absolute inset-0 w-full h-full"
+                src="https://plus.unsplash.com/premium_photo-1712828731398-ad18ac5a9748?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFwc3xlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+            </div>
+            <h4 class="mt-4 font-medium text-slate-900">Poll</h4>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</main>
