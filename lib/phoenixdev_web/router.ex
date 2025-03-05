@@ -27,6 +27,7 @@ defmodule PhoenixdevWeb.Router do
     live "/poll", PollLive
     live "/charts", ChartsLive
     live "/ag-grid", AgGridLive
+    live "/tooltip", TooltipLive
   end
 
   # Other scopes may use custom stacks.
