@@ -21,7 +21,7 @@ defmodule PhoenixdevWeb.CookiesLive do
       <div class="mt-10 space-x-4">
         <button
           type="button"
-          class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+          class="btn btn-primary"
           phx-click="increment"
           phx-value-amount="1"
         >
@@ -29,7 +29,7 @@ defmodule PhoenixdevWeb.CookiesLive do
         </button>
         <button
           type="button"
-          class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700"
+          class="btn btn-secondary"
           phx-click="increment"
           phx-value-amount="5"
         >
@@ -37,7 +37,7 @@ defmodule PhoenixdevWeb.CookiesLive do
         </button>
         <button
           type="button"
-          class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700"
+          class="btn btn-accent"
           phx-click="increment"
           phx-value-amount="10"
         >
