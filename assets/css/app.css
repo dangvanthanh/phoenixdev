@@ -2,8 +2,8 @@
    https://tailwindcss.com/docs/configuration */
 
 @import "tailwindcss" source(none);
-/* @import "mapbox-gl/dist/mapbox-gl.css";
-@import "tippy.js/dist/tippy.css"; */
+@import "mapbox-gl/dist/mapbox-gl.css";
+@import "tippy.js/dist/tippy.css";
 @source "../css";
 @source "../js";
 @source "../../lib/phoenixdev_web";
