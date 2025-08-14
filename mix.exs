@@ -39,7 +39,7 @@ defmodule Phoenixdev.MixProject do
       {:phoenix_html, "~> 4.1"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 1.0.0"},
-			{:lazy_html, ">= 0.1.0", only: :test},
+      {:lazy_html, ">= 0.1.0", only: :test},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:esbuild, "~> 0.10", runtime: Mix.env() == :dev},
@@ -59,7 +59,8 @@ defmodule Phoenixdev.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
-      {:timex, "~> 3.7.11"}
+      {:timex, "~> 3.7.11"},
+      {:topbar, github: "buunguyen/topbar", app: false, compile: false}
     ]
   end
 
@@ -78,6 +79,7 @@ defmodule Phoenixdev.MixProject do
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
       "assets.build": ["tailwind phoenixdev", "esbuild phoenixdev"],
       "assets.deploy": [
+        "cmd --cd assets npm ci",
         "tailwind phoenixdev --minify",
         "esbuild phoenixdev --minify",
         "phx.digest"

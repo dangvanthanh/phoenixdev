@@ -3,7 +3,8 @@
 		"ag-grid-community": "^34.1.1",
 		"echarts": "^6.0.0",
 		"mapbox-gl": "^3.14.0",
-		"tippy.js": "^6.3.7"
+		"tippy.js": "^6.3.7",
+		"topbar": "^3.0.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.4"
